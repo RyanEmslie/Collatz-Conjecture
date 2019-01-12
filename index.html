@@ -14,14 +14,17 @@
             <title>Collatz Conjecture</title>
         </head>
         <body>
-            <div class="container">
+            <div class="container" style="max-width: 33%">
                 <h1 class="display-4 text-center">Collatz Conjecture</h1>
 
                 <form id="displayForm">
                     <div class="form-group">
-                        <label for="startNumber">Enter starting number</label>
+                        <label for="startNumber"
+                            >Enter A Positive Integer</label
+                        >
+
                         <input
-                            type="number"
+                            type="text"
                             id="startNumber"
                             class="form-control"
                         />
@@ -33,14 +36,18 @@
                     </div>
                 </form>
 
-                <table class="table table-striped mt-5">
+                <table class="table table-striped sm">
                     <thead>
                         <tr>
+                            <th id="displayTotalSteps"></th>
+                        </tr>
+
+                        <tr class="text-center">
                             <th>Step</th>
                             <th>Integer</th>
                         </tr>
                     </thead>
-                    <tbody id="number-list"></tbody>
+                    <tbody id="number-list" class="text-center"></tbody>
                 </table>
             </div>
             <script src="app.js"></script>
